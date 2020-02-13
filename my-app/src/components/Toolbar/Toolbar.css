@@ -40,3 +40,16 @@
 .toolbar_navigation-items a:active {
 	color: #fa923f;
 }
+@media (max-width: 768px){
+	.toolbar_navigation-items {
+		display: none;
+	}
+}
+@media (min-width: 769px) {
+	.toolbar_toggle-button {
+		display: none;
+	}
+	.toolbar_logo {
+		margin-left: 0;
+	}
+}

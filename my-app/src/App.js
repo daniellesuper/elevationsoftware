@@ -3,6 +3,13 @@ import React, { Component } from 'react';
 import Toolbar from './components/Toolbar/Toolbar';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
+import logo_img from './images/logo192.jpg';
+
+
+console.log(logo_img);
+function Header() {
+  return <img src={logo_img} alt="Elevation Logo" />;
+}
 
 class App extends Component {
   state = {
@@ -15,17 +22,19 @@ class App extends Component {
     });
   };
 
+  backdropClickHandler = () => {
+    this.setState({sideDrawerOpen: false});
+  };
+
   render() {
-    let sideDrawer;
     let backdrop;
     if (this.state.sideDrawerOpen) {
-      sideDrawer = <SideDrawer />;
-      backdrop = <Backdrop />
+      backdrop = <Backdrop click={this.backdropClickHandler}/>
     }
     return (
     <div style={{height: '100%'}}>
       <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
-      {sideDrawer}
+      <SideDrawer show={this.state.sideDrawerOpen} />
       {backdrop}
       <main>
         <p>This contains page content</p>
