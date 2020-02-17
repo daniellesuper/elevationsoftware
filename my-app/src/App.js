@@ -3,10 +3,12 @@ import React, { Component } from 'react';
 import Toolbar from './components/Toolbar/Toolbar';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
+import logo_img from './images/logo192.jpg';
 
 
+console.log(logo_img);
 function Header() {
-  //return <img src={logo_img} alt="Elevation Logo" />;
+  return <img src={logo_img} alt="Elevation Logo" />;
 }
 
 class App extends Component {
