@@ -51,5 +51,10 @@
 	}
 	.toolbar_logo {
 		margin-left: 0;
+		width: 30%;
+		border: 3px pink solid;
+	}
+	.toolbar_logo img{
+		width: 100%;
 	}
 }
