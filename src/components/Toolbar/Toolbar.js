@@ -2,7 +2,7 @@ import React from 'react';
 
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
 import './Toolbar.css';
-import Logo from './elevation.png';
+import Logo from './logo192.jpg';
 
 const toolbar = props => (
 	<header className="toolbar">
@@ -12,7 +12,7 @@ const toolbar = props => (
 			</div>
 			<div className="toolbar_logo">
 				<a href="App.js">
-					<img scr={Logo} alt="Elevation Software"></img>
+					<img scr={Logo} alt=""/>
 				</a>
 			</div>
 			<div className="spacer"></div>
