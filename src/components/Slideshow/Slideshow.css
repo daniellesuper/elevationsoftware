@@ -1,0 +1,17 @@
+.slideshow{
+  position: static;
+  border: red 2px solid;
+  margin-top: 110px;
+  margin-left: 3px;
+  margin-right: 3px;
+  width: auto;
+}
+.slideshow img{
+  width: 100%;
+  
+}
+.slideshow p{
+  position: static;
+  font: 30px bold black;
+  
+}

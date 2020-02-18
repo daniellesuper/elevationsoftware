@@ -3,6 +3,10 @@ import React, { Component } from 'react';
 import Toolbar from './components/Toolbar/Toolbar';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
+import Footer from './components/Footer/Footer';
+import Slideshow from './components/Slideshow/Slideshow';
+
+
 
 class App extends Component {
   state = {
@@ -30,9 +34,10 @@ class App extends Component {
       <SideDrawer show={this.state.sideDrawerOpen} />
       {backdrop}
       <main>
-        <p>This contains page content</p>
+        <Slideshow />
       </main>
-      
+
+      <Footer />
     </div>
   );
   }
