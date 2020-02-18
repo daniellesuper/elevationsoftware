@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { css } from "@emotion/core";
+//import { css } from "@emotion/core";
 
-import ClipLoader from "react-spinners/ClipLoader";
+//import ClipLoader from "react-spinners/ClipLoader";
 
 
 
@@ -10,7 +10,7 @@ import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
 import Footer from './components/Footer/Footer';
 import Slideshow from './components/Slideshow/Slideshow';
-import Loader from './components/Loader/Loader';
+//import Loader from './components/Loader/Loader';
 
 
 

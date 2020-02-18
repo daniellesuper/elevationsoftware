@@ -1,9 +1,7 @@
 .slideshow{
   position: static;
-  border: red 2px solid;
-  margin-top: 110px;
-  margin-left: 3px;
-  margin-right: 3px;
+  /*border: red 2px solid;*/
+  margin-top: 100px;
   width: auto;
 }
 .slideshow img{
