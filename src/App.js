@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+/*import { 
+  BrowserRouter as Router, Route, Switch, Link, Redirect}
+from "../react-router-dom";*/
 //import { css } from "@emotion/core";
 
 //import ClipLoader from "react-spinners/ClipLoader";
@@ -10,6 +13,7 @@ import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
 import Footer from './components/Footer/Footer';
 import Slideshow from './components/Slideshow/Slideshow';
+//import MainPage from './pages/MainPage';
 //import Loader from './components/Loader/Loader';
 
 

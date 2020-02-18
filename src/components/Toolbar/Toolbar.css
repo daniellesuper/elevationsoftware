@@ -4,7 +4,7 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-image: linear-gradient(purple , black);
+	background-image: linear-gradient(lightblue , darkgrey);
 	height: 100px;
 }
 .toolbar_navigation {
@@ -26,8 +26,6 @@
 	margin: 0;
 	width: 200px;
 	position: sticky;
-	
-	
 }
 .toolbar_logo a{
 	color: white;

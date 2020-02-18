@@ -11,6 +11,12 @@ class Slideshow extends React.Component{
         <p>
           Placeholder
         </p>
+        <div className="showcase">
+          <div className="box">1</div>
+          <div className="box">2</div>
+          <div className="box">3</div>
+        </div>
+        <div className="spacer">spacer</div>
       </div>
     );
   }
