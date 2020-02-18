@@ -4,8 +4,8 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	background: #521751;
-	height: 156px;
+	background-image: linear-gradient(purple , black);
+	height: 100px;
 }
 .toolbar_navigation {
 	display: flex;
@@ -14,9 +14,15 @@
 	padding: 0 1rem;
 }
 .toolbar_logo {
+	flex: 1;
 	margin-left: 1rem;
 	border: hotpink 3px solid;
+	height: 75px;
 	
+}
+.toolbar_logo img{
+	margin-top: 0;
+	padding-top: 0;
 }
 .toolbar_logo a{
 	color: white;
@@ -25,7 +31,7 @@
 }
 .toolbar_logo img{
 	padding-top: 190px;
-	width: 300px;
+	width: 10px;
 	position: sticky;
 	
 
