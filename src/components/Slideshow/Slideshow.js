@@ -16,7 +16,6 @@ class Slideshow extends React.Component{
           <div className="box">2</div>
           <div className="box">3</div>
         </div>
-        <div className="spacer">spacer</div>
       </div>
     );
   }

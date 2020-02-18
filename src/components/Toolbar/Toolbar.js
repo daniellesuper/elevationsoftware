@@ -2,6 +2,7 @@ import React from 'react';
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
 import './Toolbar.css';
 import Logo from './elevation.png';
+import { Link } from 'react-router-dom';
 
 const toolbar = props => (
 	<header className="toolbar">
@@ -10,17 +11,25 @@ const toolbar = props => (
 				<DrawerToggleButton click={props.drawerClickHandler} />
 			</div>
 			<div className="toolbar_logo">
-				<a href="App.js">
+				<Link to="/">
 					<img src={Logo} alt="Elevation Software"/>
-				</a>
+				</Link>
 			</div>
 			<div className="spacer"></div>
 			<div className="toolbar_navigation-items">
 				<ul>
-					<li><a href="/.App.js"> Home</a></li>
-					<li><a href="/.App.js">About Us</a></li>
-					<li><a href="/.App.js">Services</a></li>
-					<li><a href="/.App.js">Contact</a></li>
+					<Link to="/">
+						<li>Home</li>
+					</Link>
+					<Link to="/pages/About">
+						<li>About Us</li>
+					</Link>
+					<Link to="/pages/Contact">
+						<li>Contact</li>
+					</Link>
+					<Link to="/pages/Services">
+						<li>Services</li>
+					</Link>
 				</ul>
 			</div>
 		</nav>
