@@ -21,15 +21,16 @@ const toolbar = props => (
 					<Link to="/">
 						<li>Home</li>
 					</Link>
+					<Link to="/pages/Services">
+						<li>Services</li>
+					</Link>
 					<Link to="/pages/About">
 						<li>About Us</li>
 					</Link>
 					<Link to="/pages/Contact">
-						<li>Contact</li>
+						<li>Contact Us</li>
 					</Link>
-					<Link to="/pages/Services">
-						<li>Services</li>
-					</Link>
+					
 				</ul>
 			</div>
 		</nav>

@@ -13,6 +13,7 @@ import Footer from './components/Footer/Footer';
 import Slideshow from './components/Slideshow/Slideshow';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Services from './pages/Services';
 //import Loader from './components/Loader/Loader';
 
 class App extends Component {
@@ -46,6 +47,7 @@ class App extends Component {
         <Route path="/" exact component={Slideshow} />
         <Route path="/pages/About" exact component={About} />
         <Route path="/pages/Contact" exact component={Contact} />
+        <Route path="/pages/Services" exact component={Services} />
       </Switch> 
       
       <Footer />

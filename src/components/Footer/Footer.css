@@ -1,12 +1,25 @@
-.footer{
-  font-size: 10pt;
+{
   font-family: 'futura','Gill Sans', 'Gill Sans MT', Calibri;
-  clear: both;
+}
+.footer{
+  font-size: 14pt;
+  
   position: static;
 	bottom: 0;
 	width: 100%;
-  background-image: linear-gradient(white, rgb(0, 153, 255));
+  background-image: linear-gradient(white, rgb(0, 153, 255), black );
   color: black;
-  height: 3.5rem;
+  height: 350px;
   text-align: center;
+  padding-top: 50px;
+}
+#bar {
+  width: 100%;
+  margin-top: 4rem;
+  border: 1px grey solid;
+  
+}
+#copy {
+  padding-top: 6rem;
+  font: 10pt grey ;
 }

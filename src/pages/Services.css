@@ -1,0 +1,47 @@
+
+*{
+  font: 'proxima_nova_ltlight';
+}
+.slogan {
+  font-family: 'optima', 'proxima_nova_ltsemibold';
+  font-size: 15pt;
+  padding-top: 1.5rem;
+  letter-spacing: 1px;
+  line-height: 2rem;
+  text-align: center;
+}
+.slogan h2{
+  font-family: 'Alegreya Sans SC';
+  font-style: italic;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  letter-spacing: 1px;
+}
+.row h4{
+  text-align: center;
+}
+.row .box {
+  /*border: 2px green solid;*/
+  flex: 1;
+  height: 300px;
+  padding: 2rem;
+  letter-spacing: 1px;
+  line-height: 2rem;
+  padding: 2rem;
+  letter-spacing: 1px;
+  line-height: 2rem;
+}
+/*mobile phone*/
+@media (max-width: 768px){
+	.row {
+		display: flex;
+    flex-direction: column;
+    letter-spacing: 1px;
+	}
+}
+/*larger devices*/
+@media (min-width: 769px) {
+	
+}
