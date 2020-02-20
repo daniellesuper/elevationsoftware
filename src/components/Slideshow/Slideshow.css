@@ -23,7 +23,7 @@
   font-style: italic;
 }
 .showcase .box {
-  /*border: 2px green solid;*/
+border: 2px green solid;
   flex: 1;
   font: 'proxima_nova_ltlight';
   height: 600px;

@@ -1,14 +1,15 @@
-{
-  font-family: 'futura','Gill Sans', 'Gill Sans MT', Calibri;
-}
 .footer{
-  font-size: 14pt;
-  
+  font-family: 'optima','futura','Gill Sans';
+  font: 14pt ;
+  color: rgb(176, 196, 189);
+  word-spacing: 3px;
+  letter-spacing: 2px;
+  line-height: 25px;
   position: static;
 	bottom: 0;
 	width: 100%;
-  background-image: linear-gradient(white, rgb(0, 153, 255), black );
-  color: black;
+  background-image: linear-gradient(black, grey, black );
+  
   height: 350px;
   text-align: center;
   padding-top: 50px;
@@ -17,9 +18,17 @@
   width: 100%;
   margin-top: 4rem;
   border: 1px grey solid;
-  
 }
 #copy {
   padding-top: 6rem;
   font: 10pt grey ;
+}
+/*mobile phone*/
+@media (max-width: 768px){
+	#copy {
+		display: flex;
+    flex-direction: column;
+    letter-spacing: 1px;
+    margin: 10%;
+  }
 }
