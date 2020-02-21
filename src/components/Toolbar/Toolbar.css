@@ -5,7 +5,7 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-image: linear-gradient(black, rgb(0, 153, 255) , white);
+	background-image: linear-gradient(white );
 	height: 100px;
 }
 .toolbar_navigation {
@@ -58,6 +58,9 @@
 	}
 	.toolbar_logo img{
 		align-items: center;
+	}
+	.toolbar_toggle-button {
+		color: black;
 	}
 }
 @media (min-width: 769px) {
