@@ -6,11 +6,11 @@ from "react-router-dom"
 //import { css } from "@emotion/core";
 //import ClipLoader from "react-spinners/ClipLoader";
 
-import Toolbar from './components/Toolbar/Toolbar';
-import SideDrawer from './components/SideDrawer/SideDrawer';
-import Backdrop from './components/Backdrop/Backdrop';
-import Footer from './components/Footer/Footer';
-import Slideshow from './components/Slideshow/Slideshow';
+import Toolbar from './components/Toolbar/Toolbar.jsx';
+import SideDrawer from './components/SideDrawer/SideDrawer.jsx';
+import Backdrop from './components/Backdrop/Backdrop.jsx';
+import Footer from './components/Footer/Footer.jsx';
+import Slideshow from './components/Slideshow/Slideshow.jsx';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Services from './pages/Services';
