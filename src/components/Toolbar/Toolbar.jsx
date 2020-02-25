@@ -1,8 +1,8 @@
 import React from 'react';
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
-import './Toolbar.css';
-import Logo from './elevation.png';
+import Logo from './elevationtoolbar.png';
 import { Link } from 'react-router-dom';
+
 
 const toolbar = props => (
 	<header className="toolbar">
@@ -15,7 +15,6 @@ const toolbar = props => (
 					<img src={Logo} alt="Elevation Software"/>
 				</Link>
 			</div>
-			<div className="spacer"></div>
 			<div className="toolbar_navigation-items">
 				<ul>
 					<Link to="/">
@@ -30,11 +29,11 @@ const toolbar = props => (
 					<Link to="/pages/Contact">
 						<li>Contact Us</li>
 					</Link>
-					
 				</ul>
 			</div>
 		</nav>
 	</header>
+	
 );
 
 export default toolbar;

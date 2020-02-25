@@ -1,5 +1,4 @@
 import React from 'react';
-import './Footer.css';
 
 class Footer extends React.Component{
   render(){
@@ -7,9 +6,9 @@ class Footer extends React.Component{
       <footer className="footer">
         ELEVATION SOFTWARE<br/>
         <b>(678) 923-7694</b><br/>
-        <a>INFO@ELEVATIONSOFTWARE.IO</a>
+        INFO@ELEVATIONSOFTWARE.IO
         <div id="bar"></div>
-        <div id="copy">COPYRIGHT © 2020<br /> ELEVATION SOFTWARE SERVICE INC.</div>
+        <div id="copy">ELEVATION SOFTWARE SERVICE INC. © 2020<br /> </div>
       </footer>
     );
   }

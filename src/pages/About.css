@@ -1,8 +1,0 @@
-/*mobile phone*/
-@media (max-width: 768px){
-	.row {
-		display: flex;
-    flex-direction: column;
-    letter-spacing: 1px;
-	}
-}

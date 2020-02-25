@@ -1,11 +1,11 @@
 import React from 'react';
-import './Contact.css';
+import '../styles/App.scss';
 //import Image from './atlanta.jpeg';
 
 class Contact extends React.Component{
   render(){
     return(
-      <div className="slideshow">
+      <div className="showcase">
         <div className="slogan">
           <h1>Contact Us</h1>
           <h3>

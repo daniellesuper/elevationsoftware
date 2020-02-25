@@ -1,16 +1,16 @@
 import React from 'react';
-import './Services.css';
+import '../styles/App.scss';
 import Image from './Images/code.jpeg';
 
 class Services extends React.Component{
   render(){
     return(
-      <div className="slideshow">
+      <div className="showcase">
         <div className="slogan">
           <h1>Services</h1>
-          <h2>
+          <h3>
           Custom Software Tailored To Your Needs
-          </h2>
+          </h3>
         </div>
         <div className="row">
           <div className="box">

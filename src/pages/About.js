@@ -1,11 +1,11 @@
 import React from 'react';
-import './About.css';
+import '../styles/App.scss';
 //import Image from './atlanta.jpeg';
 
 class About extends React.Component{
   render(){
     return(
-      <div className="slideshow">
+      <div className="showcase">
         <div className="slogan">
           <h1>We Are Elevation</h1>
           <h3>
