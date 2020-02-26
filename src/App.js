@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { 
-  BrowserRouter as Router, Route, Switch, Link, Redirect}
-from "react-router-dom"
+import { BrowserRouter as Router, Route, Switch, Link, Redirect} from "react-router-dom";
+import history from './services/history';
+import Routes from './routes';
 import './styles/App.scss';
 
 
@@ -39,21 +39,8 @@ class App extends Component {
       backdrop = <Backdrop click={this.backdropClickHandler}/>
     }
     return (
-    <Router>
-      <Toolbar drawerClickHandler=
-          {this.drawerToggleClickHandler} />
-      <SideDrawer show=
-          {this.state.sideDrawerOpen} />
-      {backdrop}
-      
-      <Switch>
-        <Route exact path="/" component={Showcase} />
-        <Route path="/pages/About" exact component={About} />
-        <Route path="/pages/Contact" exact component={Contact} />
-        <Route path="/pages/Services" exact component={Services} />
-      </Switch> 
-      
-      <Footer />
+    <Router history={history}>
+      <Routes />
     </Router>
   );
   }
