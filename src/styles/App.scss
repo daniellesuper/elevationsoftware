@@ -8,24 +8,24 @@
 @mixin sloganAndSubheading {
   h1 {
     text-align: center;
-    font-family: 'optima', 'proxima_nova_ltsemibold';
-    color:red;
+    font-family: $layout-font;
+    color:black;
   }
   h3 {
     color: slategray;
     text-align: center;
-    font-family: 'playfair display','Alegreya Sans SC';
+    font-family: $layout-font;
     font-style: italic;
   }
 }
 @mixin boxStyle {
   flex: 1;
-  font-family: 'optima','proxima_nova_ltlight';
+  font-family: $layout-font;
   min-height: 400px;
   padding: 2rem;
   letter-spacing: 2px;
   line-height: 2rem;
-  color: hotpink;
+  color: black;
   ul {
     list-style-type: none;
   }
