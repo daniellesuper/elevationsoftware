@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/App.scss';
 import Image from './Images/code.jpeg';
 
 class Services extends React.Component{
@@ -12,7 +11,7 @@ class Services extends React.Component{
           Custom Software Tailored To Your Needs
           </h3>
         </div>
-        <div className="row">
+        <div className="container">
           <div className="box">
             <h4>WEB APPLICATIONS</h4>
             <p>
@@ -26,7 +25,7 @@ class Services extends React.Component{
             </p>
           </div>
         </div>
-        <div className="row">
+        <div className="container">
           <div className="box">
             <h4>IT INFRASTRUCTURE</h4>
             <p>

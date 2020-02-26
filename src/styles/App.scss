@@ -5,6 +5,31 @@
   align-items: center;
   flex-direction: $direction;
 }
+@mixin sloganAndSubheading {
+  h1 {
+    text-align: center;
+    font-family: 'optima', 'proxima_nova_ltsemibold';
+    color:red;
+  }
+  h3 {
+    color: slategray;
+    text-align: center;
+    font-family: 'playfair display','Alegreya Sans SC';
+    font-style: italic;
+  }
+}
+@mixin boxStyle {
+  flex: 1;
+  font-family: 'optima','proxima_nova_ltlight';
+  min-height: 400px;
+  padding: 2rem;
+  letter-spacing: 2px;
+  line-height: 2rem;
+  color: hotpink;
+  ul {
+    list-style-type: none;
+  }
+}
 // global vars
 $layout-font: 'optima', 'futura', 'sans-serif';
 
@@ -80,8 +105,7 @@ $toolbar-link-color: black;
 }
 // drawertogglebutton styles
 .toggle-button {
-	display: flex;
-	flex-direction: column;
+	@include flex-center(column); 
 	justify-content: space-around;
 	height: 25px;
 	width: 30px;
@@ -150,30 +174,6 @@ $toolbar-link-color: black;
 	z-index: 100;
 }
 // showcase styles
-@mixin sloganAndSubheading {
-  h1 {
-    text-align: center;
-    font-family: 'optima', 'proxima_nova_ltsemibold';
-    color:black;
-  }
-  h3 {
-    color: slategray;
-    text-align: center;
-    font-family: 'playfair display','Alegreya Sans SC';
-    font-style: italic;
-  }
-}
-@mixin boxStyle {
-  flex: 1;
-  font-family: 'optima','proxima_nova_ltlight';
-  min-height: 400px;
-  padding: 2rem;
-  letter-spacing: 2px;
-  line-height: 2rem;
-  ul {
-    list-style-type: none;
-  }
-}
 .showcase{
   width: 100%;
   min-height: 100vh;
@@ -217,5 +217,4 @@ $toolbar-link-color: black;
     font-size: 10pt;
   }
 }
-
 /*# sourceMappingURL=App.css.map */

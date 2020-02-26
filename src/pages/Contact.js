@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/App.scss';
 //import Image from './atlanta.jpeg';
 
 class Contact extends React.Component{
@@ -12,7 +11,7 @@ class Contact extends React.Component{
             Developing Software that Takes Your Business to the Next Level
           </h3>
         </div>
-        <div className="showcase">
+        <div className="container">
           <div className="box">
             <h4>WHO ARE WE</h4>
             <p>
