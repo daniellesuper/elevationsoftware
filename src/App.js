@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch, Link, Redirect} from "react-rou
 import history from './services/history';
 import Routes from './routes';
 import './styles/App.scss';
+import GlobalStyles from "./styles/global";
 
 
 //import { css } from "@emotion/core";
@@ -41,6 +42,7 @@ class App extends Component {
     return (
     <Router history={history}>
       <Routes />
+      <GlobalStyles />
     </Router>
   );
   }
