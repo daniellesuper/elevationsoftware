@@ -3,6 +3,9 @@ import {
   BrowserRouter as Router, Route, Switch, Link, Redirect}
 from "react-router-dom"
 import './styles/App.scss';
+import history from './services/history';
+import Routes from './routes';
+import PropTypes from "prop-types";
 
 
 //import { css } from "@emotion/core";
@@ -39,22 +42,10 @@ class App extends Component {
       backdrop = <Backdrop click={this.backdropClickHandler}/>
     }
     return (
-    <Router>
-      <Toolbar drawerClickHandler=
-          {this.drawerToggleClickHandler} />
-      <SideDrawer show=
-          {this.state.sideDrawerOpen} />
-      {backdrop}
-      
-      <Switch>
-        <Route exact path="/" component={Showcase} />
-        <Route path="/pages/About" exact component={About} />
-        <Route path="/pages/Contact" exact component={Contact} />
-        <Route path="/pages/Services" exact component={Services} />
-      </Switch> 
-      
-      <Footer />
-    </Router>
+      <Router history={history}>
+        <Routes />
+      </Router>
+  
   );
   }
 }

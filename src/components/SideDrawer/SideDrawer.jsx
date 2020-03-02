@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 
 const sideDrawer = props => {
@@ -16,6 +17,9 @@ const sideDrawer = props => {
 			</ul>
 		</nav>
 	);
+};
+sideDrawer.propTypes = {
+	show: PropTypes.string.isRequired
 };
 
 export default sideDrawer;
