@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from "prop-types";
 
 
-const toolbar = props => (
+const toolbar = (props) => (
 	<header className="toolbar">
 		<nav className="toolbar_navigation">
 			<div className="toolbar_toggle-button">
