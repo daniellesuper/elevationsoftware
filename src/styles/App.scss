@@ -36,6 +36,7 @@ $layout-font: 'optima', 'futura', 'sans-serif';
 $toolbar-height: 65px;
 $toolbar-color: white;
 $toolbar-link-color: black;
+$footer-font-color: rgb(235, 142, 55);
 
 //toolbar styles
 .toolbar{
@@ -202,12 +203,12 @@ $toolbar-link-color: black;
 .footer{
   font-family: $layout-font;
   font-size: 14pt;
-  color: $toolbar-link-color;
+  color: $footer-font-color;
   word-spacing: 3px;
   letter-spacing: 2px;
   line-height: 25px;
   position: static;
-  background-image: linear-gradient(pink, grey, black);
+  background-color: black;
   height: 250px;
   text-align: center;
   padding-top: 50px;

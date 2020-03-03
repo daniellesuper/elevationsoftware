@@ -1,9 +1,9 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { Route, Redirect } from "react-router-dom";
-import Toolbar from "../components/Toolbar/Toolbar.jsx";
 
 import DefaultLayout from "../components/_layout/default";
+import PropTypes from "prop-types";
+import { Route, Redirect } from "react-router-dom";
+
 
 
 export default function RouteWrapper({
