@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 //import Image from './atlanta.jpeg';
 
 class Contact extends React.Component{

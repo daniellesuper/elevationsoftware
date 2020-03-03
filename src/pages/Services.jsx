@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Image from './Images/code.jpeg';
 
 class Services extends React.Component{

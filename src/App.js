@@ -51,3 +51,7 @@ class App extends Component {
 }
 
 export default App;
+
+/*App.propTypes = {
+  children: React.PropTypes.node,
+};*/
