@@ -1,5 +1,6 @@
 import React from 'react';
-import Image from './atlanta.jpeg';
+import Image from '../../images/atlanta.jpeg';
+import Services from './Services.jsx';
 
 class Showcase extends React.Component{
   render(){
@@ -27,9 +28,10 @@ class Showcase extends React.Component{
               <li>IT Infrastructure</li>
               <li>Cloud Management & Migrations</li><br /><br />
             </ul>
-            
           </div>
         </div>
+        <br/><br/><br/>
+        <Services />
       </div>
     );
   }

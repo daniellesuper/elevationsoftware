@@ -37,7 +37,7 @@ class Contact extends React.Component{
             Message<textarea type="text" placeholder="What can we help you with?" name="message"/><br/>
             Phone #<input type="text" placeholder="(XXX) XXX-XXXX" name="phoneNum"/><br/>
             <button id="submitButton" type="submit">Submit</button>
-          </form>
+          </form><br/><br/>
         </div>
         
       </div>
