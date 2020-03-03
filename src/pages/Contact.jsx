@@ -11,6 +11,7 @@ class Contact extends React.Component{
             Developing Software that Takes Your Business to the Next Level
           </h3>
         </div>
+
         <div className="container">
           <div className="box">
             <h4>WHO ARE WE</h4>
@@ -28,6 +29,17 @@ class Contact extends React.Component{
             </ul>
           </div>
         </div>
+        <div id="formBox">
+          <h3>Send Us A Message</h3>
+          <form>
+            Name<input type="text" name="name"/><br/>
+            Email<input type="text" name="email"/><br/>
+            Message<textarea type="text" placeholder="What can we help you with?" name="message"/><br/>
+            Phone #<input type="text" placeholder="(XXX) XXX-XXXX" name="phoneNum"/><br/>
+            <button id="submitButton" type="submit">Submit</button>
+          </form>
+        </div>
+        
       </div>
     );
   }
