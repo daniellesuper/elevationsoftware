@@ -34,12 +34,12 @@ class App extends Component {
       <Router history={history}>
         <Routes />
       </Router>
-      
   );
   }
 }
 export default App;
 
-/*App.propTypes = {
-  children: React.PropTypes.node,
-};*/
+App.propTypes = {
+  children: PropTypes.node.isRequired,
+  sideDrawerOpen: PropTypes.bool.isRequired
+};

@@ -1,6 +1,6 @@
 import React from 'react';
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
-import Logo from './elevationtoolbar.png';
+import Logo from '../../images/elevationtoolbar.png';
 import { Link } from 'react-router-dom';
 import PropTypes from "prop-types";
 
@@ -34,6 +34,6 @@ const toolbar = (props) => (
 );
 
 toolbar.propTypes = {
-	drawerClickHandler: PropTypes.string.isRequired
-}
+	drawerClickHandler: PropTypes.string
+};
 export default toolbar;
