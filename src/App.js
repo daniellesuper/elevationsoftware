@@ -31,9 +31,12 @@ class App extends Component {
       backdrop = <Backdrop click={this.backdropClickHandler}/>
     }
     return (
-      <Router history={history}>
-        <Routes />
-      </Router>
+      <div className="App">
+        <Router history={history}>
+          <Routes />
+        </Router>
+      </div>
+      
   );
   }
 }

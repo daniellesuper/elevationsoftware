@@ -10,10 +10,8 @@ import { Wrapper } from "./styles";
 export default function DefaultLayout({ children }) {
   return (
   <Wrapper>
-    <Toolbar drawerClickHandler=
-          {this.drawerToggleClickHandler} />
-    <SideDrawer show=
-          {this.state.sideDrawerOpen} />
+    <Toolbar />
+    <SideDrawer />
     {backdrop}
     {children}
     <Footer/>
@@ -25,3 +23,5 @@ DefaultLayout.propTypes = {
   children: PropTypes.element.isRequired
 };
 
+// drawerClickHandler={this.drawerToggleClickHandler}
+// show={this.state.sideDrawerOpen}

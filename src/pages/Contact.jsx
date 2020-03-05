@@ -13,13 +13,13 @@ class Contact extends React.Component{
         </div>
 
         <div className="container">
-          <div className="box">
-            <h4>WHO ARE WE</h4>
+          <div className="box2">
+            <h4>QUESTIONS?</h4>
             <p>
-              Elevation was founded with the idea of providing custom software solutions for clients of all size. Whether you are building a personal blog or an enterprise system, we have the knowledge to create your vision on a budget that matches the project. Our company is dedicated to designing intuitive applications and websites that can scale to countless users.
+              Curious about the impact a new system could have on your business? Are you interested in a new website but don't know where to start? Call, message or email us and we will provide solutions for your problems!
             </p>
           </div>
-          <div className="box">
+          <div className="box2">
             <h4>WE EXCEL IN</h4>
             <ul>
               <li>Web Applications</li>
