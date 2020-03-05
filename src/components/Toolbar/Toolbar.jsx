@@ -8,13 +8,13 @@ import PropTypes from "prop-types";
 const toolbar = (props) => (
 	<header className="toolbar">
 		<nav className="toolbar_navigation">
-			<div className="toolbar_toggle-button">
-				<DrawerToggleButton click={props.drawerClickHandler} />
-			</div>
 			<div className="toolbar_logo">
 				<Link to="/">
 					<img src={Logo} alt="Elevation Software"/>
 				</Link>
+			</div>
+			<div className="toolbar_toggle-button">
+				<DrawerToggleButton click={props.drawerClickHandler} />
 			</div>
 			<div className="toolbar_navigation-items">
 				<ul>
@@ -25,7 +25,7 @@ const toolbar = (props) => (
 						<li>About Us</li>
 					</Link>
 					<Link to="/pages/Contact">
-						<li>Contact Us</li>
+						<li>Contact</li>
 					</Link>
 				</ul>
 			</div>

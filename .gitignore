@@ -1,7 +1,8 @@
 # Dependency directories
 node_modules/
 
+# Editors
 *.DS_Store
 
-# ignore all logs
+# All logs
 *.log

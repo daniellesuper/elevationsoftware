@@ -47,10 +47,8 @@
     min-height: 200px;
   }
 }
-
 // global vars
 $layout-font: 'optima', 'futura', 'sans-serif';
-
 $toolbar-height: 65px;
 $toolbar-color: white;
 $toolbar-link-color: black;
@@ -241,7 +239,6 @@ $footer-font-color: rgb(235, 142, 55);
 #formBox {
   @include flex-center(column);
   font-family: $layout-font;
-
   form {
     width: 60%;
   }
@@ -261,9 +258,7 @@ $footer-font-color: rgb(235, 142, 55);
       box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     }
   }
-
 }
-
 
 // footer styles
 .footer{
