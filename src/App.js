@@ -7,10 +7,6 @@ import PropTypes from "prop-types";
 import SideDrawer from './components/SideDrawer/SideDrawer.jsx';
 import Backdrop from './components/Backdrop/Backdrop.jsx';
 
-//import { css } from "@emotion/core";
-//import ClipLoader from "react-spinners/ClipLoader";
-//import Loader from './components/Loader/Loader';
-
 class App extends Component {
   state = {
     sideDrawerOpen: false
@@ -32,11 +28,12 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <Router history={history}>
-          <Routes />
-        </Router>
+        <div className="theme-1">
+          <Router history={history}>
+            <Routes />
+          </Router>
+        </div>
       </div>
-      
   );
   }
 }

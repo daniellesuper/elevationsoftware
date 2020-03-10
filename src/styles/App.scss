@@ -1,68 +1,18 @@
-// global mixins
-@mixin flex-center( $direction ) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: $direction;
-}
-@mixin sloganAndSubheading {
-  h1 {
-    text-align: center;
-    font-family: $layout-font;
-    color:black;
-  }
-  h3 {
-    color: slategray;
-    text-align: center;
-    font-family: $layout-font;
-    font-style: italic;
-    padding-bottom: 3%;
-  }
-}
-@mixin boxStyle {
-  flex: 1;
-  font-family: $layout-font;
-  //border: red 2px solid;
-  padding: 3%;
-  height: auto;
-  letter-spacing: 2px;
-  line-height: 2rem;
-  color: black;
-  ul {
-    list-style-type: none;
-  }
-  @media (min-width: 769px){
-    min-height: 565px;
-  }
-}
-@mixin box2Style {
-  flex: 1;
-  font-family: $layout-font;
-  padding: 3%;
-  height: auto;
-  letter-spacing: 2px;
-  line-height: 2rem;
-  color: black;
-  @media (min-width: 769px){
-    min-height: 200px;
-  }
-}
-// global vars
-$layout-font: 'optima', 'futura', 'sans-serif';
-$toolbar-height: 65px;
-$toolbar-color: white;
-$toolbar-link-color: black;
-$footer-font-color: rgb(235, 142, 55);
+@import '_themes.scss';
+@import "sass-themify";
+
 
 //toolbar styles
 .toolbar{
+  @include themify($themes) {
+    background-color: themed('headerColor');      
+  }
   font-family: $layout-font;
   font-size: 15pt;
 	position: sticky;
 	top: 0;
 	left: 0;
 	width: 100%;
-  background-color: $toolbar-color;
   height: $toolbar-height;
   .toolbar_navigation {
     @include flex-center(row);
@@ -73,7 +23,7 @@ $footer-font-color: rgb(235, 142, 55);
       height: $toolbar-height;
       img {
         height: $toolbar-height;
-        position: fixed;
+        position: sticky;
       }
     }
     .toolbar_navigation-items {
@@ -87,13 +37,16 @@ $footer-font-color: rgb(235, 142, 55);
         padding: 0.5rem;
       }
       a {
-        color: $toolbar-link-color;
         text-decoration: none;
-        &:hover {
-          color: #fa923f;
+        @include themify($themes) {
+          color: themed('headerFooterTextColor');
+          &:hover {
+            color: themed('headerHoverTextColor');
+          }
         }
-      }
-    } 
+      } 
+    }
+  } 
     //iphone 5 or smaller
     @media (max-width: 320px){
       img {
@@ -104,12 +57,9 @@ $footer-font-color: rgb(235, 142, 55);
     @media (max-width: 768px){
       .toolbar_navigation-items {
         display: none;
-      }
-      .toolbar_toggle-button {
-        color: $toolbar-link-color;
-      }
-      .toolbar {
-        min-height: $toolbar-height;
+        .toolbar {
+          min-height: $toolbar-height;
+        }
       }
     } 
     // ipad pro +
@@ -119,10 +69,10 @@ $footer-font-color: rgb(235, 142, 55);
       }
     }
   }
-}
+
 // drawertogglebutton styles
 .toggle-button {
-	@include flex-center(column); 
+  @include flex-center(column);
 	justify-content: space-around;
 	height: 25px;
 	width: 30px;
@@ -138,12 +88,17 @@ $footer-font-color: rgb(235, 142, 55);
 .toggle-button_line {
 	width: 30px;
 	height: 2px;
-	background: $toolbar-link-color;
+  @include themify($themes) {
+    background: themed('headerFooterTextColor');
+  }
 }
 // sidedrawer styles
 .side-drawer {
+  @include themify($themes) {
+    color: themed('headerFooterTextColor');
+    background-color: themed('backgroundColor');
+  }
 	height: 100%;
-	background: white;
 	box-shadow: 1px 0px 7px rgba(0,0,0,0.5);
 	position: fixed;
 	top: 0;
@@ -167,7 +122,9 @@ $footer-font-color: rgb(235, 142, 55);
     margin: 0.5rem 0;
   }
   a {
-    color: #521751;
+    @include themify($themes) {
+      color: themed('headerFooterTextColor');
+    }
     text-decoration: none;
     font-size: 1.2rem;
     &:hover{
@@ -194,7 +151,7 @@ $footer-font-color: rgb(235, 142, 55);
 .showcase{
   width: 100%;
   min-height: 100vh;
-  img{
+  img {
     width: 100%;
   }
   #icon {
@@ -237,6 +194,9 @@ $footer-font-color: rgb(235, 142, 55);
 }
 //contact page form
 #formBox {
+  @include themify($themes) {
+    color: themed('bodyColor');
+  }
   @include flex-center(column);
   font-family: $layout-font;
   form {
@@ -259,22 +219,22 @@ $footer-font-color: rgb(235, 142, 55);
     }
   }
 }
-
 // footer styles
 .footer{
+  @include themify($themes) {
+    color: themed('headerFooterTextColor');  
+    background-color: themed('footerColor');
+  }
   font-family: $layout-font;
-  font-size: 14pt;
-  color: $footer-font-color;
+  font-size: 12pt;
   word-spacing: 3px;
   letter-spacing: 2px;
   line-height: 25px;
   position: static;
-  background-color: black;
   height: 250px;
   text-align: center;
   padding-top: 50px;
   #copy {
-    color: white;
     padding-top: 6rem;
     font-size: 10pt;
   }

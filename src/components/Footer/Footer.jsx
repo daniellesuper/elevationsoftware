@@ -7,8 +7,7 @@ class Footer extends React.Component{
         ELEVATION SOFTWARE<br/>
         <b>(678) 923-7694</b><br/>
         INFO@ELEVATIONSOFTWARE.IO
-        <div id="bar"></div>
-        <div id="copy">ELEVATION SOFTWARE SERVICE INC. © 2020<br /> </div>
+        <div id="copy">© 2020 ELEVATION SOFTWARE SERVICE INC. <br /> </div>
       </footer>
     );
   }
