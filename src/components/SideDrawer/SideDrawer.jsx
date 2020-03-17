@@ -1,5 +1,12 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import Home from '../../images/home.png';
+import Contact from '../../images/contact.png';
+import About from '../../images/network.png';
+import Logo from '../../images/elevation1.png'
+
+
+
 
 const sideDrawer = props => {
 	let drawerClasses = 'side-drawer';
@@ -9,9 +16,16 @@ const sideDrawer = props => {
 	return(
 		<nav className={drawerClasses}>
 			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/pages/About">About Us</a></li>
-				<li><a href="/pages/Contact">Contact</a></li>
+				<li>
+					<a href="/"><img src={Home} alt="home"/>Home</a>
+				</li>
+				<li>
+					<a href="/pages/About"><img src={About} alt="about" />About Us</a>
+				</li>
+				<li>
+					<a href="/pages/Contact"><img src={Contact} alt="contact" />Contact</a>
+				</li>
+				<li><a href="/"><img id="sideDrawerLogo" src={Logo} alt="ElevationSoftware" /></a></li>
 			</ul>
 		</nav>
 	);

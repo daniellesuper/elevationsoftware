@@ -66,22 +66,24 @@ $toolbar-height: 65px;
 $themes: (
   1: (  //uses elevation1.png toolbar logo & atlanta1 or 3.jpg
     bodyTextColor: #001C55, // text 
-    footerColor: #001C55,
+    footerColor: linear-gradient(#001C55, #001C55, rgb(34, 34, 34)),
     footerTextColor: #f2eaec,
-    headerColor: white, 
+    headerColor:  linear-gradient(white, white), 
     headerTextColor: #0E6BA8,
     headerHoverTextColor: #001C55 ,
     headingColor: #001C55,
+    sideDrawerColor: white,
     subheadingColor: #0E6BA8
   ),
   2: (  //uses elevation2.png toolbar logo & atlanta2.jpg showcase
     bodyTextColor: #032535,
-    footerColor: #032535,
+    footerColor: linear-gradient(#032535, #032535, rgb(34, 34, 34)),
     footerTextColor: white,
-    headerColor: white, 
+    headerColor: linear-gradient(white, white, rgb(180, 180, 180)), 
     headerTextColor: #032535,
     headerHoverTextColor:#ff9a00,
     headingColor:  #032535 ,
+    sideDrawerColor: white,
     subheadingColor: #394359
   ),
 );
