@@ -13,7 +13,6 @@ const DefaultLayout = ({ children }, props) => {
   });
 
   const drawerToggleClickHandler = () => {
-    console.log("clicked");
     setDrawerState( (prevState) => {
       return {sideDrawerOpen: !prevState.sideDrawerOpen};
     });
@@ -39,7 +38,8 @@ const DefaultLayout = ({ children }, props) => {
 }
 
 DefaultLayout.propTypes = {
-  children: PropTypes.element.isRequired
+  children: PropTypes.element.isRequired,
+  sideDrawerOpen: PropTypes.bool
 };
 
 export default DefaultLayout;

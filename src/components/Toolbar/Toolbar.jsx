@@ -32,8 +32,8 @@ const toolbar = (props) => (
 		</header>
 );
 
-{/*toolbar.propTypes = {
-	drawerClickHandler: PropTypes.string
-};*/}
+toolbar.propTypes = {
+	drawerClickHandler: PropTypes.func.isRequired
+};
 
 export default toolbar;

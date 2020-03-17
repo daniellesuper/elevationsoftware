@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import ImageBar from '../ImageBar/ImageBar';
+//import Image from '../images/desk.jpg';
 
 class About extends React.Component{
   render(){
     return(
       <div className="showcase">
         <div className="slogan">
-          <h1>We Are Elevation</h1>
+          <h1>ELEVATION SOFTWARE</h1>
           <h3>
             Developing Software that Takes Your Business to the Next Level
           </h3>
