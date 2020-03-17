@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from '../../images/atlanta.jpeg';
+import Image from '../../images/atlanta3.jpg';
 import Image2 from '../../images/computerscreen.png';
 import Services from './Services.jsx';
 import Slider from 'react-animated-slider';

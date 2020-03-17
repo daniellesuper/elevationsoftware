@@ -8,29 +8,12 @@ import SideDrawer from './components/SideDrawer/SideDrawer.jsx';
 import Backdrop from './components/Backdrop/Backdrop.jsx';
 
 class App extends Component {
-  state = {
-    sideDrawerOpen: false
-  };
-
-  drawerToggleClickHandler = () => {
-    this.setState((prevState) => {
-      return {sideDrawerOpen: !prevState.sideDrawerOpen};
-    });
-  };
-  backdropClickHandler = () => {
-    this.setState({sideDrawerOpen: false});
-  };
-
   render() {
-    let backdrop;
-    if (this.state.sideDrawerOpen) {
-      backdrop = <Backdrop click={this.backdropClickHandler}/>
-    }
     return (
       <div className="App">
         <div className="theme-1">
-          <Router history={history}>
-            <Routes />
+          <Router history={history} >
+            <Routes/>
           </Router>
         </div>
       </div>
@@ -40,6 +23,6 @@ class App extends Component {
 export default App;
 
 App.propTypes = {
-  children: PropTypes.node.isRequired,
-  sideDrawerOpen: PropTypes.bool.isRequired
+  children: PropTypes.node,
+  sideDrawerOpen: PropTypes.bool
 };

@@ -11,7 +11,3 @@ const drawerToggleButton = props => (
 
 
 export default drawerToggleButton;
-
-drawerToggleButton.propTypes = {
-	click: PropTypes.bool.isRequired
-};

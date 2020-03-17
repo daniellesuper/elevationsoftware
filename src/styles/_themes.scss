@@ -25,7 +25,7 @@
 }
 @mixin boxStyle {
   @include themify($themes) {
-    color: themed('bodyColor');  
+    color: themed('bodyTextColor');  
   }
   flex: 1;
   font-family: $layout-font;
@@ -42,7 +42,7 @@
 }
 @mixin box2Style {
   @include themify($themes) {
-    color: themed('bodyColor');  
+    color: themed('bodyTextColor');  
   }
   flex: 1;
   font-family: $layout-font;
@@ -50,6 +50,9 @@
   height: auto;
   letter-spacing: 2px;
   line-height: 2rem;
+  ul {
+    list-style-type: none;
+  }
   @media (min-width: 769px){
     min-height: 200px;
   }
@@ -61,23 +64,25 @@ $toolbar-height: 65px;
 
 // theme definition
 $themes: (
-  1: (
-    headerColor: white, // used for header, footer & sidedrawer
-    footerColor: black,
-    bodyColor: black,
-    headerFooterTextColor: #FF3B3F,
-    headerHoverTextColor: rgb(184, 33, 46) ,
-    headingColor: rgb(48, 47, 47),
-    subheadingColor: #A9A9A9,
-    textColor: red,
+  1: (  //uses elevation1.png toolbar logo & atlanta1 or 3.jpg
+    bodyTextColor: #001C55, // text 
+    footerColor: #001C55,
+    footerTextColor: #f2eaec,
+    headerColor: white, 
+    headerTextColor: #0E6BA8,
+    headerHoverTextColor: #001C55 ,
+    headingColor: #001C55,
+    subheadingColor: #0E6BA8
   ),
-  2: (
-    backgroundColor: #222,
-    bodyColor: #ddd,
-    headerFooterTextColor: #aaa,
-    headingColor: uppercase,
-    subheadingColor: #ddd,
-    textColor: #333,
+  2: (  //uses elevation2.png toolbar logo & atlanta2.jpg showcase
+    bodyTextColor: #032535,
+    footerColor: #032535,
+    footerTextColor: white,
+    headerColor: white, 
+    headerTextColor: #032535,
+    headerHoverTextColor:#ff9a00,
+    headingColor:  #032535 ,
+    subheadingColor: #394359
   ),
 );
 

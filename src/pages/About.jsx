@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import Image from './atlanta.jpeg';
+import ImageBar from '../ImageBar/ImageBar';
 
 class About extends React.Component{
   render(){
@@ -28,6 +28,8 @@ class About extends React.Component{
             </ul>
           </div>
         </div>
+        <ImageBar />
+        <div className="spacer"/>
       </div>
     );
   }

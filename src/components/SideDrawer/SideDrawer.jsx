@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
 
-
 const sideDrawer = props => {
 	let drawerClasses = 'side-drawer';
 	if (props.show) {
@@ -17,8 +16,9 @@ const sideDrawer = props => {
 		</nav>
 	);
 };
-sideDrawer.propTypes = {
+
+{/*sideDrawer.propTypes = {
 	show: PropTypes.string.isRequired
-};
+};*/}
 
 export default sideDrawer;
