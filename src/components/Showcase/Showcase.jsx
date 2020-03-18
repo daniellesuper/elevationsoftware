@@ -1,14 +1,15 @@
 import React from 'react';
-import Image from '../../images/atlanta3.jpg';
-import Image2 from '../../images/computerscreen.png';
+import Image from '../../images/computerscreen.png';
 import Services from './Services.jsx';
+import Carousel from './Carousel.jsx';
+
 
 
 class Showcase extends React.Component{
   render(){
     return(
       <div className="showcase">
-        <img src={Image} alt="Elevation Software"/>
+        <Carousel />
         <div className="slogan">
           <h1>WE'RE ELEVATION</h1>
           <h3>
@@ -30,7 +31,7 @@ class Showcase extends React.Component{
               <li>IT Infrastructure</li>
               <li>Cloud Management & Migrations</li><br /><br />
             </ul>
-            <img id="boxImage" src={Image2} alt="Elevation Software"/>
+            <img id="boxImage" src={Image} alt="Elevation Software"/>
           </div>
         </div>
         <br/><br/><br/>

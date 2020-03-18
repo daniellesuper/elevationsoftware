@@ -157,13 +157,16 @@
 	background: rgba(0,0,0,0.3);
 	z-index: 100;
 }
+// carousel styles
+// .carousel-status { display: none; }
+// .legend { display: none; }
+// .thumbs-wrapper { display: none; }
+
 // showcase styles
 .showcase{
   width: 100%;
   min-height: 100vh;
-  img {
-    width: 100%;
-  }
+  img { width: 100%;}
   #icon {
     width: 15%;
     float: left;
@@ -179,12 +182,8 @@
     @include flex-center(row);
     margin-left: 10%;
     margin-right: 10%;
-    .box {
-      @include boxStyle();
-    }
-    .box2{
-      @include box2Style();
-    }
+    .box { @include boxStyle(); }
+    .box2{ @include box2Style(); }
   }
   // iphone - ipad
   @media (max-width: 768px){
@@ -192,14 +191,10 @@
       @include flex-center(column);
       letter-spacing: 1px;
     }
-    #boxImage {
-      max-width: 266px;
-    }
+    #boxImage { max-width: 266px; }
   }
   @media (min-width: 769px){
-    #boxImage {
-      max-width: 266px;
-    }
+    #boxImage { max-width: 266px; }
   }
 }
 //contact page form
