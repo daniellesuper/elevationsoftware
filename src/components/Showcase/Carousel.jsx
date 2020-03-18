@@ -18,13 +18,13 @@ export default () => (
     width="100vw"
   >
     <div>
-      <img src={Img1} alt="" />
+      <img src={Img1} alt="atlanta" />
     </div>
     <div>
-      <img src={Img2} alt="" />
+      <img src={Img2} alt="desk" />
     </div>
     <div>
-      <img src={Img3} alt="" />
+      <img src={Img3} alt="atlanta" />
     </div>
   </Carousel>
 );
