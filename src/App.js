@@ -4,8 +4,7 @@ import './styles/App.scss';
 import history from './services/history';
 import Routes from './routes';
 import PropTypes from "prop-types";
-import SideDrawer from './components/SideDrawer/SideDrawer.jsx';
-import Backdrop from './components/Backdrop/Backdrop.jsx';
+
 
 class App extends Component {
   render() {
