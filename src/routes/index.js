@@ -11,8 +11,8 @@ function Routes() {
   return (
     <Switch>
       <Route path="/" exact component={Showcase} />
-      <Route path="/pages/About" exact component={About} />
-      <Route path="/pages/Contact" exact component={Contact} />
+      <Route path="/About" exact component={About} />
+      <Route path="/Contact" exact component={Contact} />
     </Switch>
   );
 }

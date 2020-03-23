@@ -4,7 +4,7 @@ import Logo from '../../images/elevation1.png';
 import { Link } from 'react-router-dom';
 import PropTypes from "prop-types";
 
-const toolbar = (props) => (
+const Toolbar = (props) => (
 		<header className="toolbar">
 			<nav className="toolbar_navigation">
 				<div className="toolbar_logo">
@@ -20,10 +20,10 @@ const toolbar = (props) => (
 						<Link to="/">
 							<li>Home</li>
 						</Link>
-						<Link to="/pages/About">
+						<Link to="/About">
 							<li>About Us</li>
 						</Link>
-						<Link to="/pages/Contact">
+						<Link to="/Contact">
 							<li>Contact</li>
 						</Link>
 					</ul>
@@ -32,8 +32,8 @@ const toolbar = (props) => (
 		</header>
 );
 
-toolbar.propTypes = {
+Toolbar.propTypes = {
 	drawerClickHandler: PropTypes.func.isRequired
 };
 
-export default toolbar;
+export default Toolbar;

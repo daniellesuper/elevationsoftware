@@ -8,7 +8,7 @@ import Logo from '../../images/elevation1.png'
 
 
 
-const sideDrawer = props => {
+const SideDrawer = props => {
 	let drawerClasses = 'side-drawer';
 	if (props.show) {
 		drawerClasses = 'side-drawer open';
@@ -20,10 +20,10 @@ const sideDrawer = props => {
 					<a href="/"><img src={Home} alt="home"/>Home</a>
 				</li>
 				<li>
-					<a href="/pages/About"><img src={About} alt="about" />About Us</a>
+					<a href="/About"><img src={About} alt="about" />About Us</a>
 				</li>
 				<li>
-					<a href="/pages/Contact"><img src={Contact} alt="contact" />Contact</a>
+					<a href="/Contact"><img src={Contact} alt="contact" />Contact</a>
 				</li>
 				<li><a href="/"><img id="sideDrawerLogo" src={Logo} alt="ElevationSoftware" /></a></li>
 			</ul>
@@ -31,8 +31,8 @@ const sideDrawer = props => {
 	);
 };
 
-sideDrawer.propTypes = {
+SideDrawer.propTypes = {
 	show: PropTypes.bool.isRequired
 };
 
-export default sideDrawer;
+export default SideDrawer;

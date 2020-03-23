@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import Image from '../images/desk2.jpg';
+// import PropTypes from 'prop-types';
 
 class Contact extends React.Component{
+  
   render(){
+    
     return(
       <div className="showcase">
         <img src={Image} alt="Elevation Software" />
@@ -24,16 +27,15 @@ class Contact extends React.Component{
         <div className="spacer" />
         <div id="formBox">
           <h3>Send Us A Message</h3>
-          <form>
+          <form className="feedback-form">
             Name<input type="text" name="name"/><br/>
             Email<input type="text" name="email"/><br/>
             Message<textarea type="text" placeholder="What can we help you with?" name="message"/><br/>
             Phone #<input type="text" placeholder="(XXX) XXX-XXXX" name="phoneNum"/><br/>
-            <button id="submitButton" type="submit">Submit</button>
+          <button id="submitButton" type="submit">Submit</button>
           </form>
           <div className="spacer" />
         </div>
-        
       </div>
     );
   }

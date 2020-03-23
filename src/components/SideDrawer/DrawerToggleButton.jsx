@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
 
-const drawerToggleButton = props => (
+const DrawerToggleButton = props => (
 	<button className="toggle-button" onClick={props.click}>
 		<div className="toggle-button_line"></div>
 		<div className="toggle-button_line"></div>
@@ -9,5 +9,8 @@ const drawerToggleButton = props => (
 	</button>
 	);
 
+	DrawerToggleButton.propTypes = {
+		show: PropTypes.func
+	};
 
-export default drawerToggleButton;
+export default DrawerToggleButton;
