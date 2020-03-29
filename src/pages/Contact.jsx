@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Image from '../images/desk2.jpg';
 
 const getConfirmation = () => {
+  // eslint-disable-next-line no-undef
   return ( alert("Message sent successfully! \n We will be in contact soon!") );
 }
 class Contact extends Component{

@@ -327,6 +327,7 @@
     filter: grayscale(100%);
       -webkit-filter: grayscale(100%);
       -webkit-transition: all 1s ease;
+      transition: all 1s ease;
     &:hover {
       filter: grayscale(0%);
       filter: gray;
@@ -343,9 +344,10 @@
   }
   h3 {
     position: absolute;
+    width: 100%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 60%);  
+    transform: translate(-50%, 30%);  
     font-style: italic;
   }
   // iphone

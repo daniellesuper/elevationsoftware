@@ -8,7 +8,7 @@ class About extends Component{
         <div className="slogan">
           <h1>ELEVATION SOFTWARE</h1>
           <h3>
-            Developing Software that Takes Your Business to the Next Level
+          Custom Software Made for Your Business
           </h3>
         </div>
         <div className="container">
