@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from '../../images/computerscreen.png';
+import Icon from '../../images/mountain.png';
 import Services from './Services.jsx';
 import Carousel from './Carousel.jsx';
 
@@ -10,11 +11,19 @@ class Showcase extends React.Component{
     return(
       <div className="showcase">
         <Carousel />
-        <div className="slogan">
-          <h1>WE'RE ELEVATION</h1>
-          <h3>
-            Developing Software that Takes Your Business to the Next Level
-          </h3>
+        <div className="animated-title">
+          <div className="text-top">
+            <div id="">
+              <span>WE'RE ELEVATION</span>
+              <span id="subHeading">Developing Software that Takes Your Business to the Next Level</span>
+            </div>
+          </div>
+          <div className="text-bottom">
+            <div id="topIcon"><img  src={Icon} alt=""/></div>
+            <div>
+              Elevation is a development agency that excels at providing the right software solutions to our clients.
+            </div>
+          </div>
         </div>
         <div className="container">
           <div className="box">

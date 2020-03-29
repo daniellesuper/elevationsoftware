@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import ImageBar from '../ImageBar/ImageBar';
-//import Image from '../images/desk.jpg';
+import ImageBar from '../components/ImageBar/ImageBar';
 
-class About extends React.Component{
+class About extends Component{
   render(){
     return(
       <div className="showcase">

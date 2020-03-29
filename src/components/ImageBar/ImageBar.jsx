@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import ImgLeft from '../images/team2.jpg';
-import ImgCenter from '../images/data.jpg';
-import ImgRight from '../images/service.jpg';
+import ImgLeft from '../../images/team2.jpg';
+import ImgCenter from '../../images/data.jpg';
+import ImgRight from '../../images/service.jpg';
 
-class ImageBar extends React.Component {
+class ImageBar extends Component {
   render(){
     return(
       <div id="imageBar">

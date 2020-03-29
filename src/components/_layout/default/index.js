@@ -1,13 +1,11 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import Toolbar from '../../Toolbar/Toolbar.jsx';
 import Footer from '../../Footer/Footer.jsx';
 import Backdrop from '../../Backdrop/Backdrop.jsx';
 import SideDrawer from '../../SideDrawer/SideDrawer.jsx';
 
-import { Wrapper } from "./styles";
-
-const DefaultLayout = ({ children }, props) => {
+const DefaultLayout = ({ children }) => {
   const [ drawerState, setDrawerState ] = useState ({
     sideDrawerOpen: false
   });
@@ -27,13 +25,13 @@ const DefaultLayout = ({ children }, props) => {
     backdrop = <Backdrop click={backdropClickHandler}/>
   }
   return (
-  <Wrapper>
+  <>
     <Toolbar drawerClickHandler={drawerToggleClickHandler}/>
     <SideDrawer show={drawerState.sideDrawerOpen}/>
     {backdrop}
     {children}
     <Footer/>
-  </Wrapper>
+  </>
   );
 }
 

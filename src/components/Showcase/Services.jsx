@@ -4,12 +4,12 @@ import Icon2 from '../../images/finger-touching-tablet-screen.png';
 import Icon3 from '../../images/computer.png';
 import Icon4 from '../../images/cloud.png';
 
-class Services extends React.Component{
+class Services extends Component{
   render(){
     return(
       <div className="showcase">
         <div className="slogan">
-          <h1>Services</h1>
+          <span className=""><h1>Services</h1></span>
           <h3>
           Custom Software Tailored To Your Needs
           </h3>

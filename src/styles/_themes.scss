@@ -6,9 +6,19 @@
   flex-direction: $direction;
 }
 @mixin sloganAndSubheading {
+  #tagLine {
+    font-size: 42pt;
+    text-align: center;
+    font-family: $layout-font;
+    padding-top: 15px;
+    @include themify($themes) {
+      color: themed('headingColor');
+    } 
+  }
   h1 {
     text-align: center;
     font-family: $layout-font;
+    text-shadow: 2px 2px 2px rgba(148, 150, 150, 1);
     @include themify($themes) {
       color: themed('headingColor');
     } 
@@ -21,12 +31,21 @@
     font-family: $layout-font;
     font-style: italic;
     padding-bottom: 3%;
+    text-shadow: 1px 1px 2px rgba(148, 150, 150, 1);
+  }
+  h4 {
+    text-align: center;
+    font-family: $layout-font;
+    @include themify($themes) {
+      color: themed('h4Color');
+    }
   }
 }
 @mixin boxStyle {
   @include themify($themes) {
     color: themed('bodyTextColor');  
   }
+  font-weight: bold;
   flex: 1;
   font-family: $layout-font;
   padding: 3%;
@@ -46,6 +65,7 @@
   }
   flex: 1;
   font-family: $layout-font;
+  font-weight: bold;
   padding: 3%;
   height: auto;
   letter-spacing: 2px;
@@ -68,23 +88,28 @@ $themes: (
     bodyTextColor: #001C55, // text 
     footerColor: linear-gradient(#001C55, #001C55, rgb(34, 34, 34)),
     footerTextColor: #f2eaec,
+    h4Color: #88dddc,
     headerColor:  linear-gradient(white, white), 
     headerTextColor: #0E6BA8,
     headerHoverTextColor: #001C55 ,
     headingColor: #001C55,
     sideDrawerColor: white,
-    subheadingColor: #0E6BA8
+    subheadingColor: #0E6BA8,
+    subheading2Color: rgb(99, 164, 192),
+    showcaseBarColor: 2px solid #001C55,
   ),
   2: (  //uses elevation2.png toolbar logo & atlanta2.jpg showcase
     bodyTextColor: #032535,
     footerColor: linear-gradient(#032535, #032535, rgb(34, 34, 34)),
     footerTextColor: white,
+    h4Color: #032535,
     headerColor: linear-gradient(white, white, rgb(180, 180, 180)), 
     headerTextColor: #032535,
     headerHoverTextColor:#ff9a00,
     headingColor:  #032535 ,
     sideDrawerColor: white,
-    subheadingColor: #394359
+    subheadingColor: #394359,
+    subheading2Color: #ff9a00
   ),
 );
 

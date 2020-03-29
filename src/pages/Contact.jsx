@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import Image from '../images/desk2.jpg';
-// import PropTypes from 'prop-types';
 
-class Contact extends React.Component{
-  
+const getConfirmation = () => {
+  return ( alert("Message sent successfully! \n We will be in contact soon!") );
+}
+class Contact extends Component{
   render(){
-    
     return(
       <div className="showcase">
         <img src={Image} alt="Elevation Software" />
@@ -27,12 +27,17 @@ class Contact extends React.Component{
         <div className="spacer" />
         <div id="formBox">
           <h3>Send Us A Message</h3>
-          <form className="feedback-form">
+          <form className="gform" method="POST" action="https://script.google.com/macros/s/AKfycbx2tWJWrX00WWCYnixSKLt48BadkhpskBonugISIA/exec">
             Name<input type="text" name="name"/><br/>
             Email<input type="text" name="email"/><br/>
             Message<textarea type="text" placeholder="What can we help you with?" name="message"/><br/>
-            Phone #<input type="text" placeholder="(XXX) XXX-XXXX" name="phoneNum"/><br/>
-          <button id="submitButton" type="submit">Submit</button>
+            Phone #<input type="text" placeholder="XXX-XXX-XXXX" name="phoneNumber"/><br/>
+          <button 
+            id="submitButton" 
+            type="submit" 
+            onClick={getConfirmation}>
+              Submit
+          </button>
           </form>
           <div className="spacer" />
         </div>

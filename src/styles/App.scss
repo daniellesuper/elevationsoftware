@@ -17,6 +17,7 @@
   	top: 0;
 	  left: 0;
   width: 100%;
+  z-index: 2;
   .toolbar_navigation {
     @include flex-center(row);
     .toolbar_logo {
@@ -163,14 +164,6 @@
   width: 100%;
   min-height: 100vh;
   img { width: 100%;}
-  #icon {
-    width: 15%;
-    float: left;
-    padding-right: 2rem;
-    &:hover {
-      transform: scale(1.5);
-    }
-  }
   .slogan {
     @include sloganAndSubheading();
   }
@@ -180,6 +173,12 @@
     margin-right: 10%;
     .box { @include boxStyle(); }
     .box2{ @include box2Style(); }
+  }
+  #icon {
+    width: 15%;
+    float: left;
+    padding-right: 2rem;
+    &:hover { transform: scale(1.2); }
   }
   // iphone - ipad
   @media (max-width: 768px){
@@ -193,6 +192,102 @@
     #boxImage { max-width: 266px; }
   }
 }
+// showcase animations
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+@keyframes showTopText {
+  0% { transform: translate3d(0, 100%, 0); }
+  40%, 60% { transform: translate3d(0, 50%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+@keyframes showBottomText {
+  0% { transform: translate3d(0, -100%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+.animated-title {
+  color: #222;
+  text-align: center;
+  font-family: $layout-font;
+  height: 60vmin;
+  left: 50%;
+  display: flex;
+  position: relative;
+  top: 130px;
+  //margin-top: 130px;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  @media (max-width: 804px){
+    top: 150px;
+  }
+  @media (max-width: 518px){
+    height: 150vmin;
+    top: 250px;
+  }
+}
+.animated-title > div {
+  height: 50%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  font-size: 42pt;
+}
+.animated-title > div div {
+  padding: 2vmin 0;
+  position: absolute;
+}
+#subHeading {
+  font-size: 20pt;
+  @include themify($themes) {
+    color: themed('subheadingColor');
+  }
+}
+.animated-title > div div span {
+  display: block;
+}
+.animated-title > div.text-top {
+  @include flex-center(row);
+  @include themify($themes) {
+    border-bottom: themed('showcaseBarColor');
+  }
+  width: 100%;
+}
+.animated-title > div.text-top div {
+  animation: showTopText 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  bottom: 0;
+  transform: translate(0, 100%);
+}
+.animated-title > div.text-top div span:first-child {
+  @include themify($themes) {
+    color: themed('headingColor');
+  }
+}
+.animated-title > div.text-bottom {
+  bottom: 0;
+  font-size: 15pt;
+  text-align: center;
+  @include flex-center(row);
+  @include themify($themes) {
+    color: themed('subheading2Color');
+  }
+  #topIcon {
+    @include flex-center(column);
+    width: 100%;
+    padding-top: 10%;
+    img { width: 50px; }
+    @media (max-width: 518px) {
+      padding-top: 25%;
+    }
+  }
+}
+.animated-title > div.text-bottom div {
+  animation: showBottomText 0.5s;
+  animation-delay: 1.75s;
+  animation-fill-mode: forwards;
+  top: 0;
+  transform: translate(0, -100%);
+}
+
 //contact page form
 #formBox {
   @include themify($themes) {
@@ -253,11 +348,18 @@
     transform: translate(-50%, 60%);  
     font-style: italic;
   }
+  // iphone
+  @media (max-width: 768px){
+    @include flex-center(column);
+    .image {
+      width: 80%;
+    }
+}
 }
 //spacer
 .spacer {
   width: 100%;
-  height: 40vh;
+  height: 30vh;
 }
 // footer styles
 footer{
