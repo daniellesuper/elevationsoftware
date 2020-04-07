@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Home from '../../images/home.png';
 import Contact from '../../images/contact.png';
 import About from '../../images/network.png';
-import Logo from '../../images/elevation1.png'
+import Logo from '../../images/elevation1.png';
 
 
 

@@ -18,7 +18,6 @@
   h1 {
     text-align: center;
     font-family: $layout-font;
-    text-shadow: 2px 2px 2px rgba(148, 150, 150, 1);
     @include themify($themes) {
       color: themed('headingColor');
     } 
@@ -31,7 +30,6 @@
     font-family: $layout-font;
     font-style: italic;
     padding-bottom: 3%;
-    text-shadow: 1px 1px 2px rgba(148, 150, 150, 1);
   }
   h4 {
     text-align: center;
@@ -43,11 +41,11 @@
 }
 @mixin boxStyle {
   @include themify($themes) {
-    color: themed('bodyTextColor');  
+    color: themed('bodyTextColor');
   }
   font-weight: bold;
   flex: 1;
-  font-family: $layout-font;
+  font-family: $body-font;
   padding: 3%;
   height: auto;
   letter-spacing: 2px;
@@ -64,7 +62,7 @@
     color: themed('bodyTextColor');  
   }
   flex: 1;
-  font-family: $layout-font;
+  font-family: $body-font;
   font-weight: bold;
   padding: 3%;
   height: auto;
@@ -80,6 +78,7 @@
 
 // variable declarations
 $layout-font: 'optima', 'futura', 'sans-serif';
+$body-font:  'Muli', sans-serif;
 $toolbar-height: 65px;
 
 // theme definition

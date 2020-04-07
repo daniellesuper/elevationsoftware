@@ -1,11 +1,31 @@
 import React, { Component } from 'react';
+import ReactModal from 'react-modal';
 import Image from '../images/desk2.jpg';
+// import Logo from '../images/elevation1.png';
+import X from '../images/close.png';
 
-const getConfirmation = () => {
-  // eslint-disable-next-line no-undef
-  return ( alert("Message sent successfully! \n We will be in contact soon!") );
-}
+ReactModal.setAppElement('#root');
+
 class Contact extends Component{
+  constructor () {
+    super();
+    this.state = {
+      showModal: false
+    };
+    
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
+  }
+  
+
+  handleOpenModal () {
+    this.setState({ showModal: true });
+  }
+  
+  handleCloseModal () {
+    this.setState({ showModal: false });
+  }
+  
   render(){
     return(
       <div className="showcase">
@@ -16,7 +36,6 @@ class Contact extends Component{
             Developing Software that Takes Your Business to the Next Level
           </h3>
         </div>
-
         <div className="container">
           <div className="box2">
             <h4>QUESTIONS?</h4>
@@ -28,17 +47,52 @@ class Contact extends Component{
         <div className="spacer" />
         <div id="formBox">
           <h3>Send Us A Message</h3>
+          <span id="required">* indicates required</span>
           <form className="gform" method="POST" action="https://script.google.com/macros/s/AKfycbx2tWJWrX00WWCYnixSKLt48BadkhpskBonugISIA/exec">
-            Name<input type="text" name="name"/><br/>
-            Email<input type="text" name="email"/><br/>
-            Message<textarea type="text" placeholder="What can we help you with?" name="message"/><br/>
-            Phone #<input type="text" placeholder="XXX-XXX-XXXX" name="phoneNumber"/><br/>
-          <button 
-            id="submitButton" 
-            type="submit" 
-            onClick={getConfirmation}>
-              Submit
-          </button>
+            Name<span id="required"> *</span>
+              <input type="text" name="name" required/>
+            Email<span id="required"> *</span>
+              <input type="email" name="email" required/>
+            Message<span id="required"> *</span>
+              <textarea 
+                type="text" 
+                placeholder="What can we help you with?" 
+                name="message" 
+                required
+              />
+            Phone #
+              <input 
+                type="tel" 
+                pattern="^\d{3}-\d{3}-\d{4}$"
+                maxLength="12" 
+                placeholder="XXX-XXX-XXXX" 
+                name="phoneNumber"
+              />
+            <button 
+              id="submitButton" 
+              type="submit" 
+              onClick={this.handleOpenModal}
+              >
+                Submit
+            </button>
+            <ReactModal 
+              isOpen={this.state.showModal}
+              contentLabel="Minimal Modal Example"
+              onRequestClose={this.handleCloseModal}
+              className="Modal"
+            >
+              <div className=".thankyou_message">
+                <button onClick={this.handleCloseModal}>
+                  <img src={X} style={{width: '20px'}} alt="Close"/>
+                </button>
+                <h1>Message sent successfully!</h1>
+                <div id="bar"/>
+                <h3>We will be in contact soon!</h3>
+                {/* <a href="/">
+                  <img id="sideDrawerLogo" src={Logo} alt="ElevationSoftware" style={{width: '3vw', margin: 'auto', padding: 'auto', position: 'absolute', bottom: '0'}}/>
+                </a> */}
+              </div>
+            </ReactModal>
           </form>
           <div className="spacer" />
         </div>
@@ -46,4 +100,5 @@ class Contact extends Component{
     );
   }
 }
+// const props = {};
 export default Contact;

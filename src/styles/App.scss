@@ -122,14 +122,14 @@
     li {
       margin: 0.9rem 0;
       a {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         text-decoration: none;
         @include themify($themes) {
           color: themed('headerTextColor');
         }
       }
       img {
-        width: 23%;
+        width: 15%;
         padding-right: 10px;
         margin-left: -1rem;
       }
@@ -193,7 +193,6 @@
   }
 }
 // showcase animations
-@import url('https://fonts.googleapis.com/css?family=Roboto:700');
 @keyframes showTopText {
   0% { transform: translate3d(0, 100%, 0); }
   40%, 60% { transform: translate3d(0, 50%, 0); }
@@ -205,22 +204,29 @@
 }
 .animated-title {
   color: #222;
-  text-align: center;
   font-family: $layout-font;
-  height: 60vmin;
-  left: 50%;
-  display: flex;
+  height: 50vmin;
+  min-width: 350px;
+  padding: 5px;
   position: relative;
-  top: 130px;
-  //margin-top: 130px;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  @media (max-width: 804px){
-    top: 150px;
+  text-align: center;
+  width: 98%;
+  @media (max-width: 405px){
+    height: 110vmin;
+    width: 90%;
   }
-  @media (max-width: 518px){
-    height: 150vmin;
-    top: 250px;
+  @media (min-width: 406px){
+    height: 100vmin;
+    width: 96%;
+  }
+  @media (min-width: 505px){
+    height: 50vmin;
+  }
+  @media (min-width: 605px){
+    height: 45vmin;
+  }
+  @media (min-width: 800px){
+    height: 30vmin;
   }
 }
 .animated-title > div {
@@ -295,8 +301,14 @@
   }
   @include flex-center(column);
   font-family: $layout-font;
+  font-size: 15pt;
   form {
     width: 60%;
+  }
+  #required {
+    font-size: 10pt;
+    color: red;
+  
   }
   input {
     padding: 5px;
@@ -307,14 +319,60 @@
     padding: 1rem;
     width: 96.5%;
   }
-  #submitButton{
-    width: 9rem;
-    float: right;
-    &:hover{
-      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  #submitButton {
+    font-family: $layout-font;
+    font-size: 12pt;
+    border-radius: 14px;
+    color: white;
+    position: absolute;
+    right: 20%;
+    height: 30px;
+    width: 100px;
+    text-shadow:0px 1px 14px #283966;
+    background:linear-gradient(to bottom, #0E6BA8 5%, rgb(99, 164, 192) 100%);
+    &:hover {
+      cursor: pointer;
+      background:linear-gradient(to bottom, #0E6BA8 5%, #7892c2 100%);
     }
   }
+  
 }
+// Modal Styles
+.Modal {
+  background-color:rgb(99, 164, 192);
+  border: 5px solid #0E6BA8;
+  color: white;
+  display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center; 
+  font-family: $body-font;
+  margin: 1.75rem auto;
+  margin-top: 15rem;
+  position: relative;
+    height: 200px;
+    width: 450px;
+  text-align: center;
+  z-index: 3;
+  button {
+    position: absolute;
+    top: 8px;
+    right: 1px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  #bar{
+    border-bottom: 2px solid #001C55;
+    width: 65%;
+    margin: auto;
+  }
+  @media (max-width: 450px){
+    width: 350px;
+  }
+}
+
+
 // image bar
 #imageBar {
   @include flex-center(row);
