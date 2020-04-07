@@ -339,9 +339,10 @@
 }
 // Modal Styles
 .Modal {
-  background-color:rgb(99, 164, 192);
+  // rgb(99, 164, 192)
+  background-image: linear-gradient(rgb(226, 225, 225), rgb(226, 225, 225), rgb(99, 164, 192));
   border: 5px solid #0E6BA8;
-  color: white;
+  color: #001C55;
   display: flex;
     align-items: center;
     flex-direction: column;
