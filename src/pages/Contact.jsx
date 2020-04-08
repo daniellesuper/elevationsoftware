@@ -45,7 +45,7 @@ class Contact extends Component{
           </div>
         </div>
         <div className="spacer" />
-        <div id="formBox">
+        <div id="formBox" className="backgroundPanel">
           <h3>Send Us A Message</h3>
           <span id="required">* indicates required</span>
           <form className="gform" method="POST" action="https://script.google.com/macros/s/AKfycbx2tWJWrX00WWCYnixSKLt48BadkhpskBonugISIA/exec">
@@ -71,7 +71,7 @@ class Contact extends Component{
             <button 
               id="submitButton" 
               type="submit" 
-              onClick={this.handleOpenModal}
+              // onClick={this.handleOpenModal}
               >
                 Submit
             </button>
@@ -81,17 +81,12 @@ class Contact extends Component{
               onRequestClose={this.handleCloseModal}
               className="Modal"
             >
-              <div className=".thankyou_message">
-                <button onClick={this.handleCloseModal}>
-                  <img src={X} style={{width: '20px'}} alt="Close"/>
-                </button>
-                <h1>Message sent successfully!</h1>
-                <div id="bar"/>
-                <h3>We will be in contact soon!</h3>
-                {/* <a href="/">
-                  <img id="sideDrawerLogo" src={Logo} alt="ElevationSoftware" style={{width: '3vw', margin: 'auto', padding: 'auto', position: 'absolute', bottom: '0'}}/>
-                </a> */}
-              </div>
+              <button onClick={this.handleCloseModal}>
+                <img src={X} style={{width: '20px'}} alt="Close"/>
+              </button>
+              <h1>Message sent successfully!</h1>
+              <div id="bar"/>
+              <h3>We will be in contact soon!</h3>              
             </ReactModal>
           </form>
           <div className="spacer" />

@@ -53,7 +53,7 @@
 
   function handleFormSubmit(event) {  // handles form submit without any jquery
     console.log("Successful Submission");
-    event.handleCloseModal();
+    
     event.preventDefault();           // we are submitting via xhr below
     var form = event.target;
     var formData = getFormData(form);
