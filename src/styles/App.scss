@@ -1,7 +1,8 @@
 @import '_themes.scss';
 
 .App{
-  min-width: 360px;
+  min-width: 320px;
+  overflow: hidden;
 }
 //toolbar styles
 .toolbar{
@@ -12,18 +13,18 @@
   font-family: $layout-font;
   font-size: 16pt;
   height: $toolbar-height;
-  min-width: 360px;
+  // min-width: 360px;
 	position: sticky;
   	top: 0;
 	  left: 0;
   width: 100%;
+  
   z-index: 2;
   .toolbar_navigation {
     @include flex-center(row);
     .toolbar_logo {
       flex: 1;
       height: $toolbar-height;
-      padding-left: 1rem;
       img {
         height: $toolbar-height;
         position: sticky;
@@ -52,6 +53,21 @@
       } 
     }
   } 
+  @media (max-width: 325px) {
+    width: 100%;
+    .toolbar_logo{
+      padding-left: 0;
+      padding-right: 5px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  @media (min-width: 326px) {
+    .toolbar_logo{
+      padding-left: 1rem;
+    }
+  }
 }
   // iphone - ipad 
   @media (max-width: 768px){
@@ -91,7 +107,6 @@
     }
   }
 }
-
 
 // sidedrawer styles
 .side-drawer {
@@ -139,7 +154,6 @@
         width: 75%;
       }
     }
-    
   }
   @media (min-width: 769px) {
     .side-drawer {
@@ -161,7 +175,6 @@
 // showcase styles
 .showcase{
   width: 100%;
-  min-height: 100vh;
   img { width: 100%;}
 
   .slogan {
@@ -209,17 +222,25 @@
   color: #222;
   font-family: $layout-font;
   height: 50vmin;
-  min-width: 350px;
+  min-width: 300px;
   padding: 5px;
   position: relative;
   text-align: center;
   
-  @media (max-width: 405px){
-    height: 110vmin;
-    width: 90%;
+  @media (max-width: 361px){
+    height: 140vmin;
+    width: 80%;
+  }
+  @media (min-width: 362px){
+    height: 130vmin;
+    width: 95%;
   }
   @media (min-width: 406px){
     height: 100vmin;
+    width: 96%;
+  }
+  @media (min-width: 475px){
+    height: 60vmin;
     width: 96%;
   }
   @media (min-width: 505px){
@@ -228,10 +249,12 @@
   @media (min-width: 605px){
     height: 45vmin;
   }
+  @media (min-width: 745px){
+    height: 45vmin;
+  }
   @media (min-width: 800px){
     height: 30vmin;
     width: 99%;
-    overflow: hidden;
   }
 }
 .animated-title > div {
@@ -416,7 +439,7 @@
   @media (max-width: 768px){
     @include flex-center(column);
     .image {
-      width: 80%;
+      width: 85%;
     }
 }
 }

@@ -15,7 +15,7 @@ export default () => (
     swipeable
     transitionTime={1000}
     useKeyboardArrows
-    width="100vw"
+    width="100%"
   >
     <div>
       <img src={Img1} alt="atlanta" />
