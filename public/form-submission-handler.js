@@ -52,7 +52,6 @@
   }
 
   function handleFormSubmit(event) {  // handles form submit without any jquery
-    console.log("Successful Submission");
     
     event.preventDefault();           // we are submitting via xhr below
     var form = event.target;
@@ -76,10 +75,6 @@
           var formElements = form.querySelector(".form-elements")
           if (formElements) {
             formElements.style.display = "none"; // hide form
-          }
-          var thankYouMessage = form.querySelector(".thankyou_message");
-          if (thankYouMessage) {
-            thankYouMessage.style.display = "block";
           }
         }
     };

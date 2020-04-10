@@ -29,6 +29,7 @@ class Contact extends Component{
   render(){
     return(
       <div className="showcase">
+        <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
         <img src={Image} alt="Elevation Software" />
         <div className="slogan">
           <h1>Contact Us</h1>
@@ -48,7 +49,8 @@ class Contact extends Component{
         <div id="formBox" className="backgroundPanel">
           <h3>Send Us A Message</h3>
           <span id="required">* indicates required</span>
-          <form className="gform" method="POST" action="https://script.google.com/macros/s/AKfycbx2tWJWrX00WWCYnixSKLt48BadkhpskBonugISIA/exec">
+          <form className="gform" method="POST" action="https://script.google.com/macros/s/AKfycbx2tWJWrX00WWCYnixSKLt48BadkhpskBonugISIA/exec"
+          onReset={this.handleOpenModal}>
             Name<span id="required"> *</span>
               <input type="text" name="name" required/>
             Email<span id="required"> *</span>
@@ -62,8 +64,7 @@ class Contact extends Component{
               />
             Phone #
               <input 
-                type="tel" 
-                pattern="^\d{3}-\d{3}-\d{4}$"
+                type="tel"
                 maxLength="12" 
                 placeholder="XXX-XXX-XXXX" 
                 name="phoneNumber"
@@ -71,10 +72,10 @@ class Contact extends Component{
             <button 
               id="submitButton" 
               type="submit" 
-              // onClick={this.handleOpenModal}
               >
                 Submit
             </button>
+
             <ReactModal 
               isOpen={this.state.showModal}
               contentLabel="Minimal Modal Example"
