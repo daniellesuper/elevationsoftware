@@ -50,6 +50,7 @@ class Contact extends Component{
           <h3>Send Us A Message</h3>
           <span id="required">* indicates required</span>
           <form className="gform" method="POST" action="https://script.google.com/macros/s/AKfycbx2tWJWrX00WWCYnixSKLt48BadkhpskBonugISIA/exec"
+          data-netlify="true"
           onReset={this.handleOpenModal}>
             Name<span id="required"> *</span>
               <input type="text" name="name" required/>

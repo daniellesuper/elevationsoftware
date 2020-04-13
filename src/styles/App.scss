@@ -176,7 +176,6 @@
 .showcase{
   width: 100%;
   img { width: 100%;}
-
   .slogan {
     @include sloganAndSubheading();
   }
@@ -366,9 +365,8 @@
 }
 // Modal Styles
 .Modal {
-  // #63A4C0
-  background-color:rgb(226, 225, 225);
   border: 5px solid #0E6BA8;
+  background-color:rgb(226, 225, 225);
   color: #001C55;
   display: flex;
     align-items: center;
