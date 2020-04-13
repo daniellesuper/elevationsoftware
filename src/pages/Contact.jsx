@@ -16,7 +16,6 @@ class Contact extends Component{
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
-  
 
   handleOpenModal () {
     this.setState({ showModal: true });
@@ -49,9 +48,7 @@ class Contact extends Component{
         <div id="formBox" className="backgroundPanel">
           <h3>Send Us A Message</h3>
           <span id="required">* indicates required</span>
-          {/* action="https://script.google.com/macros/s/AKfycbx2tWJWrX00WWCYnixSKLt48BadkhpskBonugISIA/exec" */}
-          <form class="gform" method="POST" 
-          data-netlify="true"
+          <form method="POST" action="https://script.google.com/macros/s/AKfycbx2tWJWrX00WWCYnixSKLt48BadkhpskBonugISIA/exec" className="gform"
           onReset={this.handleOpenModal}>
             Name<span id="required"> *</span>
               <input type="text" name="name" required/>
